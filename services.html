@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfect Placement - Services</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 
@@ -20,19 +23,30 @@
 </nav>
 
 <main>
-  <section class="services-list">
-    <div class="service-card">
-      <img src="1.jpg" alt="Career Services">
-      <h2>Career Services</h2>
-      <p>Professional career guidance and placement services to help you find your dream job.</p>
+  <!-- Services Header -->
+  <div class="text-center py-12 bg-gray-50" data-aos="fade-down">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto px-4">Comprehensive career solutions for your professional growth</p>
+  </div>
+
+  <!-- Services Cards Section -->
+  <section class="services-list max-w-6xl mx-auto px-4 py-12">
+    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl font-bold mb-2">Career Services</h2>
+      <p class="text-gray-600 mb-4">Professional career guidance and placement services to help you find your dream job.</p>
+      <a href="contact us.html" class="inline-block bg-[#005b96] text-white px-6 py-2 rounded-md hover:bg-[#003f6b] transition-colors duration-300">Inquire Now</a>
     </div>
-    <div class="service-card">
-      <h2>Resume Building</h2>
-      <p>Expert resume writing and optimization services to make your profile stand out.</p>
+
+    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+      <h2 class="text-2xl font-bold mb-2">Resume Building</h2>
+      <p class="text-gray-600 mb-4">Expert resume writing and optimization services to make your profile stand out.</p>
+      <a href="contact us.html" class="inline-block bg-[#005b96] text-white px-6 py-2 rounded-md hover:bg-[#003f6b] transition-colors duration-300">Inquire Now</a>
     </div>
-    <div class="service-card">
-      <h2>Interview Preparation</h2>
-      <p>Comprehensive interview training and mock sessions to boost your confidence.</p>
+
+    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+      <h2 class="text-2xl font-bold mb-2">Interview Preparation</h2>
+      <p class="text-gray-600 mb-4">Comprehensive interview training and mock sessions to boost your confidence.</p>
+      <a href="contact us.html" class="inline-block bg-[#005b96] text-white px-6 py-2 rounded-md hover:bg-[#003f6b] transition-colors duration-300">Inquire Now</a>
     </div>
   </section>
 </main>
@@ -40,6 +54,13 @@
 <footer>
   <p>&copy; 2025 Perfect Placement. All rights reserved.</p>
 </footer>
+
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
 
 </body>
 </html>
