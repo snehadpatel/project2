@@ -5,52 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Perfect Placement - Contact Us</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-    }
-    
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 1rem;
-    }
-    
-    .form-group textarea {
-      height: 150px;
-      resize: vertical;
-    }
-    
-    button {
-      background: var(--accent-color);
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: background-color 0.3s ease;
-    }
-    
-    button:hover {
-      background: var(--secondary-color);
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
 
@@ -66,50 +23,115 @@
 </nav>
 
 <main>
-  <section class="contact-form">
-    <div class="service-card">
-      <h2>Contact Us</h2>
-      <p>Get in touch with us for any inquiries about our services or to schedule a consultation.</p>
-      
-      <form action="https://formsubmit.co/your-email@example.com" method="POST">
-        <!-- Honeypot -->
-        <input type="text" name="_honey" style="display:none">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-4 py-8">
+    <!-- Contact Information -->
+    <div class="space-y-6" data-aos="fade-right">
+      <div class="service-card">
+        <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
         
-        <!-- Disable Captcha -->
-        <input type="hidden" name="_captcha" value="false">
-        
-        <!-- Success Page -->
-        <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
-        
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required minlength="2">
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold mb-2">Address</h3>
+          <p class="text-gray-700">
+            Office No 213, Second Third Floor,<br>
+            Pragati Arcade, Near Telephone Exchange,<br>
+            B/H Indian Bank, Office Area,<br>
+            GIDC VAPI, Dist-Valsad,<br>
+            Gujarat-396191
+          </p>
         </div>
-        
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
+
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold mb-2">Contact Person</h3>
+          <p class="text-gray-700">Mitesh</p>
         </div>
-        
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold mb-2">Phone Numbers</h3>
+          <p class="text-gray-700">
+            <a href="tel:854023443" class="hover:text-[#005b96] transition-colors duration-300">+91 854023443</a><br>
+            <a href="tel:97375234423" class="hover:text-[#005b96] transition-colors duration-300">+91 97375234423</a>
+          </p>
         </div>
-        
-        <div class="form-group">
-          <label for="message">Your Message</label>
-          <textarea id="message" name="message" required minlength="10"></textarea>
-        </div>
-        
-        <button type="submit">Send Message</button>
-      </form>
+      </div>
     </div>
-  </section>
+
+    <!-- Contact Form -->
+    <div data-aos="fade-left">
+      <div class="service-card">
+        <h2 class="text-2xl font-bold mb-4">Send us a Message</h2>
+        <form action="https://formsubmit.co/your-email@example.com" method="POST">
+          <!-- Honeypot -->
+          <input type="text" name="_honey" style="display:none">
+          
+          <!-- Disable Captcha -->
+          <input type="hidden" name="_captcha" value="false">
+          
+          <!-- Success Page -->
+          <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+          
+          <div class="form-group">
+            <label for="name" class="block text-gray-700 font-medium mb-2">Full Name</label>
+            <input type="text" id="name" name="name" required minlength="2" 
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#005b96]">
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
+            <input type="email" id="email" name="email" required
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#005b96]">
+          </div>
+          
+          <div class="form-group">
+            <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#005b96]">
+          </div>
+          
+          <div class="form-group">
+            <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
+            <textarea id="message" name="message" required minlength="10"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#005b96] h-32"></textarea>
+          </div>
+          
+          <button type="submit" 
+            class="w-full bg-[#005b96] text-white py-3 rounded-md hover:bg-[#003f6b] transition-colors duration-300">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Map Section -->
+  <div class="max-w-6xl mx-auto px-4 py-8" data-aos="fade-up">
+    <div class="service-card">
+      <h2 class="text-2xl font-bold mb-4">Our Location</h2>
+      <div class="aspect-w-16 aspect-h-9">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.1234567890123!2d72.91234567890123!3d20.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDA3JzI0LjQiTiA3MsKwNTQnNDQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="rounded-lg shadow-lg">
+        </iframe>
+      </div>
+    </div>
+  </div>
 </main>
 
 <footer>
   <p>&copy; 2025 Perfect Placement. All rights reserved.</p>
 </footer>
+
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
 
 </body>
 </html>
